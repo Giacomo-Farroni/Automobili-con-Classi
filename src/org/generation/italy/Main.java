@@ -42,21 +42,14 @@ public class Main {
 		
 		System.out.println("Quale auto vuoi? Auto1 o Auto2?");
 		
-		
-		do {
-			
 			scelta=sc.nextLine();
 			
 			if(scelta.equalsIgnoreCase("auto1"))
-			autoCorrente = auto1;
-		else if(scelta.equalsIgnoreCase("auto2"))
-			autoCorrente = auto2;
+				autoCorrente = auto1;
 			
-		if(!scelta.equals(auto1) || !scelta.equals(auto2))
-			System.out.println("auto non disponibile");
-			
-		} while(!scelta.equals(auto1) || !scelta.equals(auto2));
-			
+			else if(scelta.equalsIgnoreCase("auto2"))
+				autoCorrente = auto2;
+	
 			do {
 				
 					System.out.println("Vuoi accellerare o decellerare la tua velocità?");
