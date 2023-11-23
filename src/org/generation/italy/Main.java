@@ -70,33 +70,22 @@ public class Main {
 							}
 				
 					autoCorrente.aggiorna();
-						
+					//auto2.aggiorna();
+					
 					System.out.println("vuoi fare altre operazioni?");
 					risposta=sc.nextLine();
 					
 			
 			} while(risposta.startsWith("s"));
 			
-			
-				
 					System.out.println("vuoi guidare ancora?");
 					risposta=sc.nextLine();
 	
 			} while(risposta.startsWith("s"));
 	
-	
-	
 		System.out.println("Auto1: ");
 		auto1.mostraDati();
-		
 		System.out.println("Auto2: ");
 		auto2.mostraDati();
-	
-	
-	sc.close();
-	
-	}
-	
-	
-
-}
+		sc.close();
+	}}

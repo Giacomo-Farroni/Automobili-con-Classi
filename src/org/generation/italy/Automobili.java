@@ -10,7 +10,7 @@ public class Automobili {
 	
 	public void accellera() {
 		
-		if(velocità <= 190)
+		if(velocità <= 190 && carburante > 0)
 			velocità += 10;
 	
 	}
@@ -23,10 +23,10 @@ public class Automobili {
 	
 	public void mostraDati () {
 	
-	System.out.println("velocità attuale " + velocità + "km/h");
-	System.out.println("consumo medio " + consumoMedio + "Km/l" );	
-	System.out.println("carburante " + carburante + "litri");
-	System.out.println("km percorsi " + totKmPercorsi + "km");
+	System.out.println("velocità attuale " + velocità + " km/h");
+	System.out.println("consumo medio " + consumoMedio + " Km/l" );	
+	System.out.println("carburante " + carburante + " litri");
+	System.out.println("km percorsi " + totKmPercorsi + " km");
 	
 	}
 	
@@ -36,7 +36,10 @@ public class Automobili {
 		int kmPercorsi1h = velocità; 
 		totKmPercorsi += kmPercorsi1h;
 		carburante -= kmPercorsi1h/consumoMedio; 
-		carburante = velocità/consumoMedio;
+		
+		
+		if(carburante<=0)
+			velocità=0;
 		
 	/* essendo il carburante in litri, devo ottenere dalla formula un risultato
 	 * in litri. Ergo, devo dividere i kmPercorsi (espressi in km) con il
